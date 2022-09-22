@@ -16,6 +16,8 @@ Added features in comparison to the original EP4CE10 module include:
   - Up to four configuration images (jumper selectable)
   - Seven Segment LED Display for custom status or diagnostic output
 
+### T35 FPGA Module Image ###
+
 ![picture alt](Docs/T35_FPGA_Module.jpg "T35_FPGA_Module")
 
 ### T35 FPGA Module Features Diagram ###
