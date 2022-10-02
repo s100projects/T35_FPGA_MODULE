@@ -26,7 +26,7 @@ Added features in comparison to the original EP4CE10 module include:
 
 ## Toolchain ##
 
-The FPGA Tool-chain used for this project is the [EfinityIDE](https://efinixinc.com/products-efinity.html "Efinity IDE Toolchain") from [EfiniInc](https://efinixinc.com/ "Efinix").
+The FPGA Tool-chain used for this project is the [EfinityIDE](https://efinixinc.com/products-efinity.html "Efinity IDE Toolchain") from [Efinix Inc](https://efinixinc.com/ "Efinix").
 
 The Efinity IDE Toolchain is currently available with the purchase of an approved Efinity Development Board (see Efinix website for more details).
 
