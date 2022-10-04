@@ -26,7 +26,7 @@ Added features in comparison to the original EP4CE10 module include:
 
 ## Toolchain ##
 
-The FPGA Tool-chain used for this project is the [EfinityIDE](https://efinixinc.com/products-efinity.html "Efinity IDE Toolchain") from [EfiniInc](https://efinixinc.com/ "Efinix").
+The FPGA Tool-chain used for this project is the [EfinityIDE](https://efinixinc.com/products-efinity.html "Efinity IDE Toolchain") from [Efinix Inc](https://efinixinc.com/ "Efinix").
 
 The Efinity IDE Toolchain is currently available with the purchase of an approved Efinity Development Board (see Efinix website for more details).
 
@@ -50,11 +50,11 @@ The T35 FPGA Module uses a mini 5x2 JTAG Header with 0.05" (1.27mm) pin spacing.
     | 895-C232HM-DDHSL-0 | USB Adapter         | FTDI     | C232HM-DDHSL-0 |
     | 649-77313-198-20LF | Male to Male Header | Amphenol | 77313-198-20LF |
 
-The Olimex JTAG Adapter will need to be modified to fix a supply noise issue on the FTDI USB Adapter (where up to 700mV of noise is present on the FTDI 3.3V supply pin), and also to allow for use of the Olimex JTAG Adapter with the T35 JTAG pinout.
+### USB Adapter Supply Noise Fix ###
 
-### Supply Noise Fix ###
+The Olimex JTAG Adapter will need to be modified to fix a supply noise issue on the FTDI USB Adapter (where up to 700mV of noise is present on the FTDI 3.3V supply pin), and also to allow for the use of the Olimex JTAG Adapter with the T35 JTAG pinout.
 
-To fix the supply noise issue, a 100uF electrolytic cap must be added between pins 2 and 4 or 6 on the 20-pin female header:
+To fix the supply noise issue, a 100uF electrolytic cap must be added between pins 2 and 6 on the 20-pin female header:
 
 ![picture alt](Docs/Olimex_JTAG_100uf_Mod.jpg "Olimex JTAG Supply Noise Fix")
 
