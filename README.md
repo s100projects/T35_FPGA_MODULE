@@ -1,6 +1,17 @@
 # T35_FPGA_MODULE
  S100Computers T35 FPGA Module Design
 
+Table of Contents:
+- [Project Overview](#protject-overview)
+  - [T35 FPGA Module Image](#t35-fpga-module-image)
+  - [T35 FPGA Module Features DIagram](#t35-fpga-module-features-diagram)
+- [Toolchain](#toolchain)
+- [Project Organization](#project-organization)
+- [JTAG Programming Adapters](#jtag-programming-adapters)
+  - [USB Adapter Supply Noise Fix](#usb-adapter-supply-noise-fix)
+  - [Olimex JTAG Adapter Wire Mods](#olimex-jtag-adapter-wire-mods)
+  - [FTDI USB Adapter to Olimex JTAG Header Connections](#ftdi-usb-adapter-to-olimex-jtag-header-connections)
+
 ## Project Overview ##
 
 This is a custom T35 FPGA project module for [S100Computers](http://s100computers.com/ "S100 Computers").  This module was designed to augment the EP4CE10 based FPGA originally in use on the various FPGA S-100 Boards in the S100Computers inventory.
