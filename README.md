@@ -141,7 +141,12 @@ Proceed to the <b>Quick Start</b> section below to verify correct operation of t
   
   2. Start the Efinity toolchain and load the <i>C:/S100Projects/T35seg7.xml</i> project.
   3. Compile the T35seg7 project by clicking on the B1 icon. (Wait for completion)
-  4. Open the Efinity Programmer by clicking on the B2 icon.
+  4. Connect the JTAG Adapter to the T35 JTAG port and plug the cable into a USB port.
+  Be careful to align the red stripe to the left.  When done the JTAG cable should hang straight down to the Olimex JTAG Adapter without looping (if looped, you may have the cable ends reversed).
+  
+ ![picture alt](Docs/T35seg7_proj.jpg "T35_Seven_Segment_Display_Project")
+ 
+  5. Open the Efinity Programmer by clicking on the B2 icon.
 
   There are two types of programming that can be done with the T35 FPGA Module:
   - JTAG Programming (this targets the FPGA configuration RAM directly, but does not save it in Flash).
