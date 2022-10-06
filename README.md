@@ -128,4 +128,25 @@ The following instructions explain how to install a USB driver for Linux operati
 ![picture alt](Docs/Zadig-Install-Settings.jpg "Zadig_Install_Settings")
 
   7. Click <b>Reinstall Driver</b> or <b>Replace Driver</b>.
+
+Proceed to the <b>Quick Start</b> section below to verify correct operation of the JTAG Programmer.
   
+# Quick Start (after toolset and driver install)
+
+## Quick Start Prep
+
+  1. Download (Clone) the [T35seg7 Test Project](https://github.com/s100projects/T35seg7 "T35seg7 Test Project") to the <i>C:/S100Projects</i> directory.
+  This is a good initial project to use on existing S100COmputers S-100 FPGA Boards as it does not drive any of the legacy WaveShare GPIOs; it only drives the GPIOs associated with the seven segment display (GPIOL_72 to GPIOL_81).  This avoids any signal conflicts with exisiting designs.
+  The purpose of this FPGA project is to count from 0 to 'F' (hexadecimal) on one second boundaries.
+  
+  2. Start the Efinity toolchain and load the <i>C:/S100Projects/T35seg7.xml</i> project.
+  3. Compile the T35seg7 project by clicking on the B1 icon. (Wait for completion)
+  4. Open the Efinity Programmer by clicking on the B2 icon.
+
+  There are two types of programming that can be done with the T35 FPGA Module:
+    a. JTAG Programming (this targets the FPGA configuration RAM directly, but does not save it in Flash).
+    b. SPI Flash Programming (this targets the SPI Configuration Flash for confiuration auto-load on power on).
+    
+## JTAG Programming
+
+
