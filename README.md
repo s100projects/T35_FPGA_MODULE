@@ -110,8 +110,7 @@ Note: If your board was connected to your computer before you executed these com
   2. Copy the Zadig application from the 'Downloads' to a working directory.
   3. Right click the Zadig application and select "Run as Administrator".
     ![picture alt](Docs/Zadig-Run-Admin.jpg "Zadig_Run_as_Administrator")
-  4. Choose <b>Options->List All Device</b>.
-  5. Turn off <b>Options->Ignore Hubs or Composite Parents</b>.
+  4. Choose <b>Options->List All Devices</b> and turn off <b>Options->Ignore Hubs or Composite Parents</b>.
     ![picture alt](Docs/Zadig-Options-Done.jpg "Zadig_Options_Done")
   6. Select <b>C232HM-DDHSL-0</b> from the drop down list.
     ![picture alt](Docs/Zadig-C232HM-Select.jpg "Zadig_Select_C232HM_Select")
