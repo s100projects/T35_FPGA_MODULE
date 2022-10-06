@@ -1,7 +1,7 @@
 # T35_FPGA_MODULE
  S100Computers T35 FPGA Module Design
 
-Table of Contents:
+<b><u>Table of Contents: </u></b>
 - [Project Overview](#protject-overview)
   - [T35 FPGA Module Image](#t35-fpga-module-image)
   - [T35 FPGA Module Features DIagram](#t35-fpga-module-features-diagram)
@@ -127,4 +127,4 @@ Note: If your board was connected to your computer before you executed these com
 
 ![picture alt](Docs/Zadig-Install-Settings.jpg "Zadig_Install_Settings")
   
-  7. Click <b>Reinstall</b> or <b>Replace Driver</b>.
+  7. Click <b>Reinstall Driver</b> or <b>Replace Driver</b>.
