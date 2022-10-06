@@ -144,8 +144,8 @@ Proceed to the <b>Quick Start</b> section below to verify correct operation of t
   4. Open the Efinity Programmer by clicking on the B2 icon.
 
   There are two types of programming that can be done with the T35 FPGA Module:
-    a. JTAG Programming (this targets the FPGA configuration RAM directly, but does not save it in Flash).
-    b. SPI Flash Programming (this targets the SPI Configuration Flash for confiuration auto-load on power on).
+  - JTAG Programming (this targets the FPGA configuration RAM directly, but does not save it in Flash).
+  - SPI Flash Programming (this targets the SPI Configuration Flash for confiuration auto-load on power on).
     
 ## JTAG Programming
 
