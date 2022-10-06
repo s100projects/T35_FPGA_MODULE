@@ -110,10 +110,14 @@ Note: If your board was connected to your computer before you executed these com
   2. Copy the Zadig application from the 'Downloads' to a working directory.
   3. Right click the Zadig application and select "Run as Administrator".
     ![picture alt](Docs/Zadig-Run-Admin.jpg "Zadig_Run_as_Administrator")
+    
   4. Choose <b>Options->List All Devices</b> and turn off <b>Options->Ignore Hubs or Composite Parents</b>.
     ![picture alt](Docs/Zadig-Options-Done.jpg "Zadig_Options_Done")
-  6. Select <b>C232HM-DDHSL-0</b> from the drop down list.
+
+  5. Select <b>C232HM-DDHSL-0</b> from the drop down list.
     ![picture alt](Docs/Zadig-C232HM-Select.jpg "Zadig_Select_C232HM_Select")
-  7. Select <b>libusbK</b> from the drop down list.
+  
+  6. Select <b>libusbK</b> from the drop down list.
     ![picture alt](Docs/Zadig-Install-Settings.jpg "Zadig_Install_Settings")
-  8. Click <b>Reinstall</b> or <b>Replace Driver</b>.
+  
+  7. Click <b>Reinstall</b> or <b>Replace Driver</b>.
