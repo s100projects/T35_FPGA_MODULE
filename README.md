@@ -1,6 +1,17 @@
 # T35_FPGA_MODULE
  S100Computers T35 FPGA Module Design
 
+Table of Contents:
+- [Project Overview](#protject-overview)
+  - [T35 FPGA Module Image](#t35-fpga-module-image)
+  - [T35 FPGA Module Features DIagram](#t35-fpga-module-features-diagram)
+- [Toolchain](#toolchain)
+- [Project Organization](#project-organization)
+- [JTAG Programming Adapters](#jtag-programming-adapters)
+  - [USB Adapter Supply Noise Fix](#usb-adapter-supply-noise-fix)
+  - [Olimex JTAG Adapter Wire Mods](#olimex-jtag-adapter-wire-mods)
+  - [FTDI USB Adapter to Olimex JTAG Header Connections](#ftdi-usb-adapter-to-olimex-jtag-header-connections)
+
 ## Project Overview ##
 
 This is a custom T35 FPGA project module for [S100Computers](http://s100computers.com/ "S100 Computers").  This module was designed to augment the EP4CE10 based FPGA originally in use on the various FPGA S-100 Boards in the S100Computers inventory.
@@ -44,6 +55,7 @@ The T35 FPGA Module uses a mini 5x2 JTAG Header with 0.05" (1.27mm) pin spacing.
     | 769-1106        | USB Adapter         | FTDI    | C232HM-DDHSL-0 |
     | S2021EC-10-ND   | Male to Male Header | Sullins | PRPC010DABN-RC |
 
+
     | Mouser Part No     | Description         | Manf     | Manf Part No   |
     |--------------------|---------------------|----------|----------------|
     | 909-ARM-JTAG-20-10 | JTAG Adapter        | Olimex   | ARM-JTAG-20-10 |
@@ -79,4 +91,37 @@ To connect the USB Adapter to the Olimex JTAG, first plug in the 20-pin male to 
     | Pin 13              | GREEN  | JTAG TDO        | Pin 6           |
     | Pin 15              | GREY   | CRESET          | Pin 10          |
 
+## Installing the FTDI/Zadig USB Drivers
 
+### Installing the Linux USB Driver:
+
+(from Efinix AN006)
+The following instructions explain how to install a USB driver for Linux operating systems.
+  1. Disconnect your board from your computer.
+  2. In a terminal, use these commands:
+    ```
+    > sudo <installation directory>/bin/install_usb_driver.sh
+    > sudo udevadm control --reload-rules
+    ```
+Note: If your board was connected to your computer before you executed these commands, you need to disconnect and re-connect it.
+
+### Installing the Windows USB Driver
+  1. Download Zadig from [zadig.akeo.ie](https://zadig.akeo.ie/ "zadug.akeo.ie")
+  2. Copy the Zadig application from the 'Downloads' to a working directory.
+  3. Right click the Zadig application and select "Run as Administrator".
+
+![picture alt](Docs/Zadig-Run-Admin.jpg "Zadig_Run_as_Administrator")
+    
+  4. Choose <b>Options->List All Devices</b> and turn off <b>Options->Ignore Hubs or Composite Parents</b>.
+
+![picture alt](Docs/Zadig-Options-Done.jpg "Zadig_Options_Done")
+
+  5. Select <b>C232HM-DDHSL-0</b> from the drop down list.
+
+![picture alt](Docs/Zadig-C232HM-Select.jpg "Zadig_Select_C232HM_Select")
+  
+  6. Select <b>libusbK</b> from the drop down list.
+
+![picture alt](Docs/Zadig-Install-Settings.jpg "Zadig_Install_Settings")
+  
+  7. Click <b>Reinstall</b> or <b>Replace Driver</b>.
