@@ -136,9 +136,8 @@ Proceed to the <b>Quick Start</b> section below to verify correct operation of t
 ## Quick Start Prep
 
   1. Download (Clone) the [T35seg7 Test Project](https://github.com/s100projects/T35seg7 "T35seg7 Test Project") to the <i>C:/S100Projects</i> directory.
-  This is a good initial project to use on existing S100COmputers S-100 FPGA Boards as it does not drive any of the legacy WaveShare GPIOs; it only drives the GPIOs associated with the seven segment display (GPIOL_72 to GPIOL_81).  This avoids any signal conflicts with exisiting designs.
-  The purpose of this FPGA project is to count from 0 to 'F' (hexadecimal) on one second boundaries.
-  
+  This is a good initial project to use on existing [S100Computers](http://s100computers.com/ "S100Computers") S-100 FPGA Boards as it does not drive any of the legacy WaveShare GPIOs; it only drives the GPIOs associated with the seven segment display (GPIOL_72 to GPIOL_81).  This avoids any signal conflicts with exisiting designs.
+  The purpose of this FPGA project is to count and diaplay the numbers from 0 to 'F' (hexadecimal) on the seven segment display on one second boundaries.  
   2. Start the Efinity toolchain and load the <i>C:/S100Projects/T35seg7.xml</i> project.
   3. Compile the T35seg7 project by clicking on the ![picture alt](Docs/EFX_Compile_Btn.jpg "Compile_Button") icon. (Wait for completion)
   4. Connect the JTAG Adapter to the T35 JTAG port and plug the cable into a USB port.
