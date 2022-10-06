@@ -11,6 +11,9 @@ Table of Contents:
   - [USB Adapter Supply Noise Fix](#usb-adapter-supply-noise-fix)
   - [Olimex JTAG Adapter Wire Mods](#olimex-jtag-adapter-wire-mods)
   - [FTDI USB Adapter to Olimex JTAG Header Connections](#ftdi-usb-adapter-to-olimex-jtag-header-connections)
+- [Installing the FTDI/Zadig USB Drivers](#installing-the-ftdi/zadig-usb-drivers)
+  - [Installing the Linux USB Driver](#installing-the-linux-usb-driver)
+  - [Installing the Windows USB Driver](#installing-the-windows-usb-driver)
 
 ## Project Overview ##
 
