@@ -106,7 +106,7 @@ The following instructions explain how to install a USB driver for Linux operati
     > sudo <installation directory>/bin/install_usb_driver.sh
     > sudo udevadm control --reload-rules
 ```
-<b>Note:</b> If your board was connected to your computer before you executed these commands, you need to disconnect and re-connect it.
+<b>Note:</b> If your USB JTAG Adapter was connected to your computer before you executed these commands, you need to disconnect and re-connect it.
 
 ### Installing the Windows USB Driver
   1. Download <b>Zadig</b> from [zadig.akeo.ie](https://zadig.akeo.ie/ "zadug.akeo.ie")
