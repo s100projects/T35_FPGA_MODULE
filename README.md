@@ -1,7 +1,7 @@
 # T35_FPGA_MODULE
- S100Computers T35 FPGA Module Design
+  ##S100Computers T35 FPGA Module Design
 
-<b><u>Table of Contents: </u></b>
+<b>Table of Contents:</b>
 - [Project Overview](#protject-overview)
   - [T35 FPGA Module Image](#t35-fpga-module-image)
   - [T35 FPGA Module Features DIagram](#t35-fpga-module-features-diagram)
