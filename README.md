@@ -55,6 +55,7 @@ The T35 FPGA Module uses a mini 5x2 JTAG Header with 0.05" (1.27mm) pin spacing.
     | 769-1106        | USB Adapter         | FTDI    | C232HM-DDHSL-0 |
     | S2021EC-10-ND   | Male to Male Header | Sullins | PRPC010DABN-RC |
 
+
     | Mouser Part No     | Description         | Manf     | Manf Part No   |
     |--------------------|---------------------|----------|----------------|
     | 909-ARM-JTAG-20-10 | JTAG Adapter        | Olimex   | ARM-JTAG-20-10 |
