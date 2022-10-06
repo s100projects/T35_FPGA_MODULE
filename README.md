@@ -91,4 +91,30 @@ To connect the USB Adapter to the Olimex JTAG, first plug in the 20-pin male to 
     | Pin 13              | GREEN  | JTAG TDO        | Pin 6           |
     | Pin 15              | GREY   | CRESET          | Pin 10          |
 
+## Installing the FTDI/Zadig USB Drivers
 
+### Installing the Linux USB Driver:
+
+(from Efinix AN006)
+The following instructions explain how to install a USB driver for Linux operating systems.
+  1. Disconnect your board from your computer.
+  2. In a terminal, use these commands:
+    ```
+    > sudo <installation directory>/bin/install_usb_driver.sh
+    > sudo udevadm control --reload-rules
+    ```
+Note: If your board was connected to your computer before you executed these commands, you need to disconnect and re-connect it.
+
+### Installing the Windows USB Driver
+  1. Download Zadig from [zadig.akeo.ie](https://zadig.akeo.ie/ "zadug.akeo.ie")
+  2. Copy the Zadig application from the 'Downloads' to a working directory.
+  3. Right click the Zadig application and select "Run as Administrator".
+    ![picture alt](Docs/Zadig-Run-Admin.jpg "Zadig_Run_as_Administrator")
+  4. Choose <b>Options->List All Device</b>.
+  5. Turn off <b>Options->Ignore Hubs or Composite Parents</b>.
+    ![picture alt](Docs/Zadig-Options-Done.jpg "Zadig_Options_Done")
+  6. Select <b>C232HM-DDHSL-0</b> from the drop down list.
+    ![picture alt](Docs/Zadig-C232HM-Select.jpg "Zadig_Select_C232HM_Select")
+  7. Select <b>libusbK</b> from the drop down list.
+    ![picture alt](Docs/Zadig-Install-Settings.jpg "Zadig_Install_Settings")
+  8. Click <b>Reinstall</b> or <b>Replace Driver</b>.
