@@ -82,7 +82,7 @@ To fix the supply noise issue, a 100uF electrolytic cap must be added between pi
 
 ### Olimex JTAG Adapter Wire Mods ###
 
-R2 on the Olimex JTAG Adapter (which is actually implemented as a trace/short) needs to be removed to avoid interfering with the Chip Select signal  of the configuration flash on the T35 FPGA Module (pin 9 on the 10-pin Olimex header).  See [OlimexJTAGschematic](https://www.olimex.com/Products/ARM/JTAG/ARM-JTAG-20-10/resources/ARM-JTAG-20-10_latest-schematic.pdf "Olimex JTAG Adapter") Schematic.
+R2 on the Olimex JTAG Adapter (which is actually implemented as a trace/short) needs to be removed to avoid interfering with the Chip Select signal  of the configuration flash on the T35 FPGA Module (pin 9 on the 10-pin Olimex header).  See [Olimex JTAG Schematic](https://www.olimex.com/Products/ARM/JTAG/ARM-JTAG-20-10/resources/ARM-JTAG-20-10_latest-schematic.pdf "Olimex JTAG Adapter") Schematic.
 
 ![picture alt](Docs/Olimex_JTAG_Wire_Mod.jpg "Olimex Adapter Wire Mods")
 
@@ -146,7 +146,7 @@ Proceed to the <b>Quick Start</b> section below to verify correct operation of t
   1. Create a new directory called <i>T35seg7</i> under the <i>C:/S100Projects/</i> directory (e.g. - <i>C:/S100Projects/T35seg7/</i> ).
   2. Download (Clone) the [T35seg7 Test Project](https://github.com/s100projects/T35seg7 "T35seg7 Test Project") to the <i>C:/S100Projects/T35seg7/</i> directory.
   This is a good initial project to use on existing [S100Computers](http://s100computers.com/ "S100Computers") S-100 FPGA Boards as it does not drive any of the legacy WaveShare GPIOs; it only drives the GPIOs associated with the seven segment display (GPIOL_72 to GPIOL_81).  This avoids any signal conflicts with exisiting designs.
-  The purpose of this FPGA project is to count and diaplay the numbers from 0 to 'F' (hexadecimal) on the seven segment display on one second boundaries.
+  The purpose of this FPGA project is to count and display the numbers from 0 to 'F' (hexadecimal) on the seven segment display on one second boundaries.
   
   3. Start the Efinity toolchain and load the <i>C:/S100Projects/T35seg7.xml</i> project.
   4. Compile the T35seg7 project by clicking on the ![picture alt](Docs/EFX_Compile_Btn.jpg "Compile_Button") icon. (Wait for completion)
