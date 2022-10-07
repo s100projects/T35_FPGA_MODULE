@@ -154,8 +154,16 @@ Proceed to the <b>Quick Start</b> section below to verify correct operation of t
     
 ## JTAG Programming
 
-  1. Click the "File Select" Button and select the <i>T35seg7.bit</i> configuration bitstream from the open file dialog box.
+  1. Click the "File Select" Button ![picture alt](Docs/File_Select.jpg "File_Select") and select the <i>T35seg7.bit</i> configuration bitstream from the open file dialog box.
   2. Under "Programming Mode" select "JTAG" from the drop-down menu.
+  3. Click the "Program Button" ![picture alt](Docs/Prog_Start_Btn.jpg "Prog_Button") to program the T35 via JTAG.
+
+![picture alt](Docs/Programmer-Start.jpg "JTAG_Programming")
+
+## SPI Flash Programming
+
+ 1. Click the "File Select" Button ![picture alt](Docs/File_Select.jpg "File_Select") and select the <i>T35seg7.hex</i> configuration bitstream from the open file dialog box.
+  2. Under "Programming Mode" select "SPI Active using JTAG Bridge" from the drop-down menu.
   3. Click the "Program Button" ![picture alt](Docs/Prog_Start_Btn.jpg "Prog_Button") to program the T35 via JTAG.
 
 ![picture alt](Docs/Programmer-Start.jpg "JTAG_Programming")
