@@ -142,7 +142,7 @@ Proceed to the <b>Quick Start</b> section below to verify correct operation of t
   2. Start the Efinity toolchain and load the <i>C:/S100Projects/T35seg7.xml</i> project.
   3. Compile the T35seg7 project by clicking on the ![picture alt](Docs/EFX_Compile_Btn.jpg "Compile_Button") icon. (Wait for completion)
   4. Connect the JTAG Adapter to the T35 JTAG port and plug the cable into a USB port.  <b>(NOTE: No other connections are necessary as the T35 FPGA Module can derive its power from either the module interface pins or the JTAG Cable).</b>
-  Be careful to align the red stripe of the JTAG cable to the left and make sure that the JTAG pins are properly aligned <b>(it is possible to plug in this connector one roww off).</b>  When done the JTAG cable should hang straight down to the Olimex JTAG Adapter without looping (if looped, you may have the cable ends reversed).
+  Be careful to align the red stripe of the JTAG cable to the left and make sure that the JTAG pins are properly aligned <b>(it is possible to plug this connector in being one row off).</b>  When done the JTAG cable should hang straight down to the Olimex JTAG Adapter without looping (if looped, you may have the cable ends reversed).
   
  ![picture alt](Docs/T35seg7_proj.jpg "T35_Seven_Segment_Display_Project")
  
