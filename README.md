@@ -82,7 +82,7 @@ To fix the supply noise issue, a 100uF electrolytic cap must be added between pi
 
 ### Olimex JTAG Adapter Wire Mods ###
 
-R2 on the Olimex JTAG Adapter (which is actually implemented as a trace/short) needs to be removed to avoid interfering with the Chip Select signal  of the configuration flash on the T35 FPGA Module (pin 9 on the 10-pin Olimex header).  See [Olimex JTAG Schematic](https://www.olimex.com/Products/ARM/JTAG/ARM-JTAG-20-10/resources/ARM-JTAG-20-10_latest-schematic.pdf "Olimex JTAG Adapter") Schematic.
+R2 on the Olimex JTAG Adapter (which is actually implemented as a trace/short) needs to be removed to avoid interfering with the Chip Select signal  of the configuration flash on the T35 FPGA Module (pin 9 on the 10-pin Olimex header).  See the [Olimex JTAG Schematic](https://www.olimex.com/Products/ARM/JTAG/ARM-JTAG-20-10/resources/ARM-JTAG-20-10_latest-schematic.pdf "Olimex JTAG Adapter").
 
 ![picture alt](Docs/Olimex_JTAG_Wire_Mod.jpg "Olimex Adapter Wire Mods")
 
