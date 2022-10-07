@@ -189,6 +189,8 @@ Once programmed, you should see the T35 transition into <b>User</b> mode:
   
 ![picture alt](Docs/Successful_SPI_Programming.jpg "SPI_Programming_Successful")  
 
+<b>NOTE: Since the jtag_spi_flash_loader.bit bitstream is still loaded into the T35's configuration RAM after programming, you will need to press the reset button on the module to have the T35 load the new configuration from the flash.</b>
+
 # Design Files
 
 ## Schematic
