@@ -18,6 +18,9 @@
   - [Quick Start Prep](#quick-start-prep)
   - [JTAG Programming](#jtag-programming)
   - [SPI Flash Programming](#spi-flash-programming)
+- [Design Files](#design-files)
+  - [Schematic](#schematic)
+  - [Pin Assignment Spreadsheet](#pin-assignment-spreadsheet)
 
 ## Project Overview ##
 
@@ -140,19 +143,20 @@ Proceed to the <b>Quick Start</b> section below to verify correct operation of t
 
 ## Quick Start Prep
 
-  1. Download (Clone) the [T35seg7 Test Project](https://github.com/s100projects/T35seg7 "T35seg7 Test Project") to the <i>C:/S100Projects/</i> directory.
+  1. Create a new directory called <i>T35seg7</i> under the <i>C:/S100Projects/</i> directory (e.g. - <i>C:/S100Projects/T35seg7/</i> ).
+  2. Download (Clone) the [T35seg7 Test Project](https://github.com/s100projects/T35seg7 "T35seg7 Test Project") to the <i>C:/S100Projects/T35seg7/</i> directory.
   This is a good initial project to use on existing [S100Computers](http://s100computers.com/ "S100Computers") S-100 FPGA Boards as it does not drive any of the legacy WaveShare GPIOs; it only drives the GPIOs associated with the seven segment display (GPIOL_72 to GPIOL_81).  This avoids any signal conflicts with exisiting designs.
   The purpose of this FPGA project is to count and diaplay the numbers from 0 to 'F' (hexadecimal) on the seven segment display on one second boundaries.
   
-  2. Start the Efinity toolchain and load the <i>C:/S100Projects/T35seg7.xml</i> project.
-  3. Compile the T35seg7 project by clicking on the ![picture alt](Docs/EFX_Compile_Btn.jpg "Compile_Button") icon. (Wait for completion)
-  4. Download and copy the [jtag_spi_flash_loader.bit](https://github.com/s100projects/T35_Flash_Programmer "T35_Flash_Programmer") file in to the <i>/outflow/</i> directory.  Doing this allows the Efinity Programmer to find the JTAG Bridge file when performing SPI Programming.
-  5. Connect the JTAG Adapter to the T35 JTAG port and plug the cable into a USB port.  <b>(NOTE: No other connections are necessary as the T35 FPGA Module can derive its power from either the module interface pins or the JTAG Cable).</b>
+  3. Start the Efinity toolchain and load the <i>C:/S100Projects/T35seg7.xml</i> project.
+  4. Compile the T35seg7 project by clicking on the ![picture alt](Docs/EFX_Compile_Btn.jpg "Compile_Button") icon. (Wait for completion)
+  5. Prepare for SPI FLash Programming by downloading and copying the [jtag_spi_flash_loader.bit](https://github.com/s100projects/T35_Flash_Programmer "T35_Flash_Programmer") file into the <i>/outflow/</i> directory.  Doing this will allow the Efinity Programmer to find the JTAG Bridge bitstream file automatically when performing SPI Programming.
+  6. Connect the JTAG Adapter to the T35 JTAG port and plug the cable into a USB port.  <b>(NOTE: No other connections are necessary as the T35 FPGA Module can derive its power from either the module interface pins or the JTAG Cable).</b>
   Be careful to align the red stripe of the JTAG cable to the left and make sure that the JTAG pins are properly aligned <b>(it is possible to plug this connector in being one row off).</b>  When done the JTAG cable should hang straight down to the Olimex JTAG Adapter without looping (if looped, you may have the cable ends reversed).
   
  ![picture alt](Docs/T35seg7_proj.jpg "T35_Seven_Segment_Display_Project")
  
-  6. Open the Efinity Programmer by clicking on the ![picture alt](Docs/EFX_Program_Btn.jpg "Prog_Button") icon.
+  7. Open the Efinity Programmer by clicking on the ![picture alt](Docs/EFX_Program_Btn.jpg "Prog_Button") icon.
 
   There are two types of programming that can be done with the T35 FPGA Module:
   - JTAG Programming (this targets the FPGA configuration RAM directly, but does not save it in Flash).
@@ -172,7 +176,7 @@ Once programmed, you should see the T35 transition into <b>User</b> mode:
 
 ## SPI Flash Programming
 
- 1. Click the "File Select" Button ![picture alt](Docs/File_Select.jpg "File_Select") and select the <i>T35seg7.hex</i> configuration bitstream from the open file dialog box.
+  1. Click the "File Select" Button ![picture alt](Docs/File_Select.jpg "File_Select") and select the <i>T35seg7.hex</i> configuration bitstream from the open file dialog box.
   2. Under "Programming Mode" select "SPI Active using JTAG Bridge" from the drop-down menu.
   3. Use the "File Select" button in the "Auto configure JTAG Bridge Image" to select the downloaded <i>jtag_spi_flash_loader.bit</i> in the outflow directory.
   (Efinity should have already recognized the bridge image in the outflow directory, but if it doesn't, make sure to select it before proceeding).
@@ -184,3 +188,10 @@ Once programmed, you should see the T35 transition into <b>User</b> mode:
   After programming, you should see a "Flash verify Successful!" message when done:
   
 ![picture alt](Docs/Successful_SPI_Programming.jpg "SPI_Programming_Successful")  
+
+# Design Files
+
+## Schematic
+
+## Pin Assignment Spreadsheet
+
