@@ -1,6 +1,8 @@
 # T35_FPGA_MODULE
 <b>[S100Computers](http://s100computers.com/ "S100Computers") T35 FPGA Module Design</b>
 
+<b>NOTE: See [Important Wire Mod needed for Version 1b](#important-wire-mod-needed-for-version-1b) details at the end of page!</b>
+
 <b>Table of Contents:</b>
 - [Project Overview](#project-overview)
   - [T35 FPGA Module Image](#t35-fpga-module-image)
@@ -21,7 +23,8 @@
 - [Design Files](#design-files)
   - [Schematic](#schematic)
   - [Pin Assignment Spreadsheet](#pin-assignment-spreadsheet)
-
+- [Important Wire Mod needed for Version 1b](#important-wire-mod-needed-for-version-1b)
+  
 ## Project Overview ##
 
 This is a custom T35 FPGA project module for [S100Computers](http://s100computers.com/ "S100 Computers").  This module was designed to augment the EP4CE10 based FPGA originally in use on the various FPGA S-100 Boards in the S100Computers inventory.
@@ -200,3 +203,9 @@ Once programmed, you should see the T35 transition into <b>User</b> mode:
 ## Pin Assignment Spreadsheet
 
   [T35 FPGA Module Pin Assignments](Docs/COREEP4CE10pinsUpdated.xlsx "T35 FPGA Module Schematic")
+
+# Important Wire Mod needed for Version 1b
+
+There is an important single wire modification needed for complete compatability with the WaveShare pinout due to a mising PCB net on DC1D pin 148 (please see schematic above for details).
+
+![picture alt](Docs/T35_FPGA_v1bc_wire_mod.jpg "T35_FPGA_v1bc_wire_mod")
