@@ -193,5 +193,8 @@ Once programmed, you should see the T35 transition into <b>User</b> mode:
 
 ## Schematic
 
+  [T35 FPGA Module Schematic](Docs/fpga_coret35_v1c_FINAL_with_wire_mod.pdf "T35 FPGA Module Schematic")
+
 ## Pin Assignment Spreadsheet
 
+  [T35 FPGA Module Pin Assignments](Docs/COREEP4CE10pinsUpdated.xlsx "T35 FPGA Module Schematic")
