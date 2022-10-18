@@ -24,6 +24,8 @@
   - [Schematic](#schematic)
   - [Pin Assignment Spreadsheet](#pin-assignment-spreadsheet)
 - [Important Wire Mod needed for Version 1b](#important-wire-mod-needed-for-version-1b)
+- [Jumper Assignments](#jumper-assignments)
+  - [Jumper Intended Use](#jumper-intended-use)
   
 ## Project Overview ##
 
@@ -93,16 +95,16 @@ R2 on the Olimex JTAG Adapter (which is actually implemented as a trace/short) n
 
 To connect the USB Adapter to the Olimex JTAG, first plug in the 20-pin male to male header into the Olimex Female 20-pin header.  Next plug the USB Adapter pin header cables into the following pins.  When done you should have a color sequence of wires as shown above.
 
-    | JTAG Adapter Pin No | Color  | Signal Name     | T35 JTAG Pin No |
-    |---------------------|--------|-----------------|-----------------|
-    | Pin 2               | RED    | +3.3V Supply    | Pin 1           |
-    | Pin 5               | YELLOW | JTAG TDI        | Pin 8           |
-    | Pin 6               | BLACK  | GROUND          | Pins 3 and 5    |
-    | Pin 7               | BROWN  | JTAG TMS        | Pin 2           |
-    | Pin 9               | ORANGE | JTAG TCK        | Pin 4           |
-    | Pin 11 (Optional)   | PURPLE | QSPI_CSN        | Pin 9           |
-    | Pin 13              | GREEN  | JTAG TDO        | Pin 6           |
-    | Pin 15              | GREY   | CRESET          | Pin 10          |
+  | JTAG Adapter Pin No | Color  | Signal Name     | T35 JTAG Pin No |
+  |---------------------|--------|-----------------|-----------------|
+  | Pin 2               | RED    | +3.3V Supply    | Pin 1           |
+  | Pin 5               | YELLOW | JTAG TDI        | Pin 8           |
+  | Pin 6               | BLACK  | GROUND          | Pins 3 and 5    |
+  | Pin 7               | BROWN  | JTAG TMS        | Pin 2           |
+  | Pin 9               | ORANGE | JTAG TCK        | Pin 4           |
+  | Pin 11 (Optional)   | PURPLE | QSPI_CSN        | Pin 9           |
+  | Pin 13              | GREEN  | JTAG TDO        | Pin 6           |
+  | Pin 15              | GREY   | CRESET          | Pin 10          |
 
 ## Installing the FTDI Zadig USB Drivers ##
 
@@ -207,6 +209,27 @@ Once programmed, you should see the T35 transition into <b>User</b> mode:
   [T35 FPGA Module Pin Assignments](Docs/COREEP4CE10pinsUpdated.xlsx "T35 FPGA Module Schematic")
   (with special thanks to Terry Fox!)
 
+## Jumper Assignments ##
+
+  | <b>Jumper Ref Des</b> | <b>Function</b>                       | <b>Default Setting</b>       |
+  |----------------|--------------------------------|-----------------------|
+  | <b>J1</b> - OSC DIS   | On Board Oscillator Disable    | <b>Open</b> (Osc Enabled)    |
+  | <b>J3</b> - CBSEL1    | Config Binary Select:          | <b>Open</b> (Image 0)        |
+  | <b>J4</b> - CBSEL0    | [00, 01, 10, 11]               | <b>Open</b> (Image 0)        |
+  | <b>J7</b> - QSPI/SPI  | QSPI vs SPI I/F Config         | <b>Open</b> (QSPI)           |
+  | <b>J10</b> - 5V-3V EN | 5V to 3V SMPS Enable           | <b>Open</b> (5V-3V Disabled) |
+  | <b>J11</b> - JTAG     | JTAG Connector for Programming |         <b>N/A</b>           |
+  
+  <b>NOTE: J7 is only used for initial manufacturing board qualification and testing of new Configuration Flash Devices.  Leave OPEN for normal module use.</b>
+  
+### Jumper Intended Use ###
+
+  <b>J1</b> -    Allows for disabling the on-board oscillator to allow for the use of an external oscillator on J6 pin 23.
+  <b>J3/J4</b> - Allows for programming and selection (at boot) of multiple configuration binary images.
+  <b>J7</b> -    Used for qualifciation of new configuration flashes (not normally used by users - leave open)
+  <b>J10</b> -   Allows for enabling the on-board 5V to 3.3V DC-DC Converter (SMPS) for hosts that DO NOT SUPPLY 3.3V to the T35 Module.
+  <b>J11</b> -   10 pin 0.050" Mini JTAG Header for programming and configuration.
+  
 # Important Wire Mod needed for Version 1b #
 
 There is an important single wire modification needed for complete compatability with the WaveShare pinout due to a mising PCB net on DC1D pin 148 (please see schematic above for details).
