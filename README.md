@@ -104,9 +104,9 @@ To connect the USB Adapter to the Olimex JTAG, first plug in the 20-pin male to 
     | Pin 13              | GREEN  | JTAG TDO        | Pin 6           |
     | Pin 15              | GREY   | CRESET          | Pin 10          |
 
-## Installing the FTDI Zadig USB Drivers
+## Installing the FTDI Zadig USB Drivers ##
 
-### Installing the Linux USB Driver:
+### Installing the Linux USB Driver: ###
 
 (from Efinix AN006)
 The following instructions explain how to install a USB driver for Linux operating systems.
@@ -118,10 +118,11 @@ The following instructions explain how to install a USB driver for Linux operati
 ```
 <b>Note:</b> If your USB JTAG Adapter was connected to your computer before you executed these commands, you need to disconnect and re-connect it.
 
-### Installing the Windows USB Driver
+### Installing the Windows USB Driver ###
   1. Download <b>Zadig</b> from [zadig.akeo.ie](https://zadig.akeo.ie/ "zadug.akeo.ie")
   2. Copy the <b>Zadig</b> application from the 'Downloads' to a working directory.
   3. Right click the <b>Zadig</b> application and select "Run as Administrator".
+  <b>NOTE:Zadig can have problems identifying the C232HM-DDHSL-0 when other FTDI based USB devices are plugged in.  Efinix recommends unplugging other FTDI devices while configuring the C232HM-DDHSL-0, after which you should be able to plug the other devices back in.</b>
 
 ![picture alt](Docs/Zadig-Run-Admin.jpg "Zadig_Run_as_Administrator")
 
@@ -141,10 +142,10 @@ The following instructions explain how to install a USB driver for Linux operati
 
 Proceed to the <b>Quick Start</b> section below to verify correct operation of the JTAG Programmer.
   
-# Quick Start 
+# Quick Start #
 (After toolset and driver install).
 
-## Quick Start Prep
+## Quick Start Prep ##
 
   1. Create a new directory called <i>T35seg7</i> under the <i>C:/S100Projects/</i> directory (e.g. - <i>C:/S100Projects/T35seg7/</i> ).
   2. Download (Clone) the [T35seg7 Test Project](https://github.com/s100projects/T35seg7 "T35seg7 Test Project") to the <i>C:/S100Projects/T35seg7/</i> directory.
@@ -165,7 +166,7 @@ Proceed to the <b>Quick Start</b> section below to verify correct operation of t
   - JTAG Programming (this targets the FPGA configuration RAM directly, but does not save it in Flash).
   - SPI Flash Programming (this targets the SPI Configuration Flash for confiuration auto-load on power on).
     
-## JTAG Programming
+## JTAG Programming ##
 
   1. Click the "File Select" Button ![picture alt](Docs/File_Select.jpg "File_Select") and select the <i>T35seg7.bit</i> configuration bitstream from the open file dialog box.
   2. Under "Programming Mode" select "JTAG" from the drop-down menu.
@@ -177,7 +178,7 @@ Once programmed, you should see the T35 transition into <b>User</b> mode:
 
 ![picture alt](Docs/Successful_JTAG_Programming.jpg "Successful_JTAG_Programming")
 
-## SPI Flash Programming
+## SPI Flash Programming ##
 
   1. Click the "File Select" Button ![picture alt](Docs/File_Select.jpg "File_Select") and select the <i>T35seg7.hex</i> configuration bitstream from the open file dialog box.
   2. Under "Programming Mode" select "SPI Active using JTAG Bridge" from the drop-down menu.
@@ -194,17 +195,18 @@ Once programmed, you should see the T35 transition into <b>User</b> mode:
 
 <b>NOTE: Since the jtag_spi_flash_loader.bit bitstream is still loaded into the T35's configuration RAM after programming, you will need to press the reset button on the module to have the T35 load the new configuration from the flash.</b>
 
-# Design Files
+# Design Files #
 
-## Schematic
+## Schematic ##
 
   [T35 FPGA Module Schematic](Docs/fpga_coret35_v1c_FINAL_with_wire_mod.pdf "T35 FPGA Module Schematic")
 
-## Pin Assignment Spreadsheet
+## Pin Assignment Spreadsheet ##
 
   [T35 FPGA Module Pin Assignments](Docs/COREEP4CE10pinsUpdated.xlsx "T35 FPGA Module Schematic")
+  (with special thanks to Terry Fox!)
 
-# Important Wire Mod needed for Version 1b
+# Important Wire Mod needed for Version 1b #
 
 There is an important single wire modification needed for complete compatability with the WaveShare pinout due to a mising PCB net on DC1D pin 148 (please see schematic above for details).
 
