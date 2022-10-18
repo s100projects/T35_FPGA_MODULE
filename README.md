@@ -64,18 +64,18 @@ Projects for this board are generally stored on the root of the host system hard
 
 The T35 FPGA Module uses a mini 5x2 JTAG Header with 0.05" (1.27mm) pin spacing.  Mating cables and a JTAG Adapter PCB are available from Olimex that can be adapted for use in programming the T35 FPGA Module.  The parts needed to implement this JTAG Programmer are available from [Digikey](https://www.digikey.com) and [Mouser](https://www.mouser.com):
 
-    | Digikey Part No | Description         | Manf    | Manf Part No   |
-    |-----------------|---------------------|---------|----------------|
-    | 1188-1016-ND    | JTAG Adapter        | Olimex  | ARM-JTAG-20-10 |
-    | 769-1106        | USB Adapter         | FTDI    | C232HM-DDHSL-0 |
-    | S2021EC-10-ND   | Male to Male Header | Sullins | PRPC010DABN-RC |
+  | <b>Digikey Part No</b> | <b>Description</b>         | <b>Manf</b>    | <b>Manf Part No</b>   |
+  |-----------------|---------------------|---------|----------------|
+  | 1188-1016-ND    | JTAG Adapter        | Olimex  | ARM-JTAG-20-10 |
+  | 769-1106        | USB Adapter         | FTDI    | C232HM-DDHSL-0 |
+  | S2021EC-10-ND   | Male to Male Header | Sullins | PRPC010DABN-RC |
 
 
-    | Mouser Part No     | Description         | Manf     | Manf Part No   |
-    |--------------------|---------------------|----------|----------------|
-    | 909-ARM-JTAG-20-10 | JTAG Adapter        | Olimex   | ARM-JTAG-20-10 |
-    | 895-C232HM-DDHSL-0 | USB Adapter         | FTDI     | C232HM-DDHSL-0 |
-    | 649-77313-198-20LF | Male to Male Header | Amphenol | 77313-198-20LF |
+  | <b>Mouser Part No</b>     | <b>Description</b>         | <b>Manf</b>     | <b>Manf Part No</b>   |
+  |--------------------|---------------------|----------|----------------|
+  | 909-ARM-JTAG-20-10 | JTAG Adapter        | Olimex   | ARM-JTAG-20-10 |
+  | 895-C232HM-DDHSL-0 | USB Adapter         | FTDI     | C232HM-DDHSL-0 |
+  | 649-77313-198-20LF | Male to Male Header | Amphenol | 77313-198-20LF |
 
 ### USB Adapter Supply Noise Fix ###
 
