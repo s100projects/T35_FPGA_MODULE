@@ -122,6 +122,7 @@ The following instructions explain how to install a USB driver for Linux operati
   1. Download <b>Zadig</b> from [zadig.akeo.ie](https://zadig.akeo.ie/ "zadug.akeo.ie")
   2. Copy the <b>Zadig</b> application from the 'Downloads' to a working directory.
   3. Right click the <b>Zadig</b> application and select "Run as Administrator".
+  
   <b>NOTE:Zadig can have problems identifying the C232HM-DDHSL-0 when other FTDI based USB devices are plugged in.  Efinix recommends unplugging other FTDI devices while configuring the C232HM-DDHSL-0, after which you should be able to plug the other devices back in.</b>
 
 ![picture alt](Docs/Zadig-Run-Admin.jpg "Zadig_Run_as_Administrator")
