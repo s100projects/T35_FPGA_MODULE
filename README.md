@@ -224,11 +224,11 @@ Once programmed, you should see the T35 transition into <b>User</b> mode:
   
 ### Jumper Intended Use ###
 
-  <b>J1</b> -    Allows for disabling the on-board oscillator to allow for the use of an external oscillator on J6 pin 23.
-  <b>J3/J4</b> - Allows for programming and selection (at boot) of multiple configuration binary images.
-  <b>J7</b> -    Used for qualifciation of new configuration flashes (not normally used by users - leave open)
-  <b>J10</b> -   Allows for enabling the on-board 5V to 3.3V DC-DC Converter (SMPS) for hosts that DO NOT SUPPLY 3.3V to the T35 Module.
-  <b>J11</b> -   10 pin 0.050" Mini JTAG Header for programming and configuration.
+  - <b>J1</b> -    Allows for disabling the on-board oscillator to allow for the use of an external oscillator on J6 pin 23.
+  - <b>J3/J4</b> - Allows for programming and selection (at boot) of multiple configuration binary images.
+  - <b>J7</b> -    Used for qualifciation of new configuration flashes (not normally used by users - leave open)
+  - <b>J10</b> -   Allows for enabling the on-board 5V to 3.3V DC-DC Converter (SMPS) for hosts that DO NOT SUPPLY 3.3V to the T35 Module.
+  - <b>J11</b> -   10 pin 0.050" Mini JTAG Header for programming and configuration.
   
 # Important Wire Mod needed for Version 1b #
 
