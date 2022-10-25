@@ -232,6 +232,6 @@ Once programmed, you should see the T35 transition into <b>User</b> mode:
   
 # Important Wire Mod needed for Version 1b #
 
-There is an important single wire modification needed for complete compatability with the WaveShare pinout due to a mising PCB net on DC1D pin 148 (please see schematic above for details).
+There is an important single wire modification needed for complete compatibility with the WaveShare pinout due to a missing PCB net on DC1D pin 148 (please see schematic above for details).
 
 ![picture alt](Docs/T35_FPGA_v1bc_wire_mod.jpg "T35_FPGA_v1bc_wire_mod")
