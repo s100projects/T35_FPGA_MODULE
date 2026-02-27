@@ -228,7 +228,7 @@ Once programmed, you should see the T35 transition into <b>User</b> mode:
   1. Click the "File Select" Button ![picture alt](Docs/JTAG_Programming_Setup_2025+.jpg "File_Select") and select the relevant <i>*.hex</i> configuration bitstream from the open file dialog box.
   2. Under "Programming Mode" select "SPI Active using JTAG Bridge" from the drop-down menu.
   3. Use the "File Select" button in the "Auto configure JTAG Bridge Image" to select the Efinity supplied bit stream image for the device to be programmed.
-  (Efinity should have already recognized the bridge image in the outflow directory, but if it doesn't, make sure to select it before proceeding).
+  (Efinity should have already recognized the bridge image in the default directory, but if it doesn't, you will need to navigate to the correct device directory before proceeding).
   4. Click the "Program Button" ![picture alt](Docs/Prog_Start_Btn.jpg "Prog_Button") to program the T35 via JTAG.
   The programmer will now erase and then program the bitstream image into the flash.
 
