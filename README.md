@@ -13,13 +13,15 @@
   - [USB Adapter Supply Noise Fix](#usb-adapter-supply-noise-fix)
   - [Olimex JTAG Adapter Wire Mods](#olimex-jtag-adapter-wire-mods)
   - [FTDI USB Adapter to Olimex JTAG Header Connections](#ftdi-usb-adapter-to-olimex-jtag-header-connections)
+  - [S100Projects EFX-JTAG Adapters](#s100projects-efx-jtag-adapters)
 - [Installing the FTDI Zadig USB Drivers](#installing-the-ftdi-zadig-usb-drivers)
   - [Installing the Linux USB Driver](#installing-the-linux-usb-driver)
   - [Installing the Windows USB Driver](#installing-the-windows-usb-driver)
 - [Quick Start](#quick-start)
   - [Quick Start Prep](#quick-start-prep)
   - [JTAG Programming](#jtag-programming)
-  - [SPI Flash Programming](#spi-flash-programming)
+  - [SPI Flash Programming with Efinity Tools Released Prior to 2025](#spi-flash-programming-with-efinity-tools-released-prior-to-2025)
+  - [SPI Flash Programming with Efinity Tools Released in 2025 and Later](#spi-flash-programming-with-efinity-tools-released-in-2025-and-later)
 - [Design Files](#design-files)
   - [Schematic](#schematic)
   - [Pin Assignment Spreadsheet](#pin-assignment-spreadsheet)
@@ -67,6 +69,7 @@ The T35 FPGA Module uses a mini 5x2 JTAG Header with 0.05" (1.27mm) pin spacing.
   | <b>Digikey Part No</b> | <b>Description</b>         | <b>Manf</b>    | <b>Manf Part No</b>   |
   |-----------------|---------------------|---------|----------------|
   | 1188-1016-ND    | JTAG Adapter        | Olimex  | ARM-JTAG-20-10 |
+  | 4864-EFINIXDOWNLOADCABLEII-ND    | Alternate JTAG Adapter        | Centron  | EFINIX DOWNLOAD CABLE II |
   | 769-1106        | USB Adapter         | FTDI    | C232HM-DDHSL-0 |
   | S2021EC-10-ND   | Male to Male Header | Sullins | PRPC010DABN-RC |
 
@@ -106,7 +109,19 @@ To connect the USB Adapter to the Olimex JTAG, first plug in the 20-pin male to 
   | Pin 13              | GREEN  | JTAG TDO        | Pin 6           |
   | Pin 15              | GREY   | CRESET          | Pin 10          |
 
+### S100Projects EFX-JTAG Adapters ###
+
+To minimize the fragility of the original Olimex and FTDI C232HM-DDHSL-0 JTAG adapter a dedicated "all-in-one" adapter was created and was promoted within the S100Computers.com Google Group.
+
+![picture alt](Docs/EFX-JTAG.jpg "S-100 Projects EFX-JTAG Adapter")
+
+These adapters are now in limited supply and so a version 2 is now under development and should be available in early Q3'2026.
+
+![picture alt](Docs/EFX-JTAGv2.jpg "S-100 Projects EFX-JTAGv2 Adapter")
+
 ## Installing the FTDI Zadig USB Drivers ##
+
+The following driver installation applies to all of the above JTAG adapters.
 
 ### Installing the Linux USB Driver: ###
 
@@ -121,6 +136,11 @@ The following instructions explain how to install a USB driver for Linux operati
 <b>Note:</b> If your USB JTAG Adapter was connected to your computer before you executed these commands, you need to disconnect and re-connect it.
 
 ### Installing the Windows USB Driver ###
+
+<b><u>IMPORTANT:</b></u>
+
+If using the EFX-JTAG adapters, you need to look for both <b><u>EFX-JTAG for T35 FPGA Mod by JLW (Interface 0)</b></u> and <b><u>EFX-JTAG for T35 FPGA Mod by JLW (Interface 1)</b></u> device interfaces in Step 5 below. 
+
   1. Download <b>Zadig</b> from [zadig.akeo.ie](https://zadig.akeo.ie/ "zadug.akeo.ie")
   2. Copy the <b>Zadig</b> application from the 'Downloads' to a working directory.
   3. Right click the <b>Zadig</b> application and select "Run as Administrator".
@@ -133,7 +153,10 @@ The following instructions explain how to install a USB driver for Linux operati
 
 ![picture alt](Docs/Zadig-Options-Done.jpg "Zadig_Options_Done")
 
-  5. Select <b>C232HM-DDHSL-0</b> from the drop down list.
+  5. Select <b>C232HM-DDHSL-0</b> (or the EFX-JTAG Adapter Interfaces) from the drop down list.
+  
+  For EFX-JTAG adapters, you need to look for both <b><u>EFX-JTAG for T35 FPGA Mod by JLW (Interface 0)</b></u> and <b><u>EFX-JTAG for T35 FPGA Mod by JLW (Interface 1)</b></u> device interfaces and repeat steps 6 and 7 below. 
+
 
 ![picture alt](Docs/Zadig-C232HM-Select.jpg "Zadig_Select_C232HM_Select")
 
@@ -183,12 +206,14 @@ Once programmed, you should see the T35 transition into <b>User</b> mode:
 
 ## SPI Flash Programming ##
 
+### SPI Flash Programming with Efinity Tools Released Prior to 2025 ###
+
   1. Click the "File Select" Button ![picture alt](Docs/File_Select.jpg "File_Select") and select the <i>T35seg7.hex</i> configuration bitstream from the open file dialog box.
   2. Under "Programming Mode" select "SPI Active using JTAG Bridge" from the drop-down menu.
   3. Use the "File Select" button in the "Auto configure JTAG Bridge Image" to select the downloaded <i>jtag_spi_flash_loader.bit</i> in the outflow directory.
   (Efinity should have already recognized the bridge image in the outflow directory, but if it doesn't, make sure to select it before proceeding).
   4. Click the "Program Button" ![picture alt](Docs/Prog_Start_Btn.jpg "Prog_Button") to program the T35 via JTAG.
-  The programmer will now erase and then program the T35seg7 bitstream image into the flash.
+  The programmer will now erase and then program the bitstream image into the flash.
 
 ![picture alt](Docs/SPI_Programming_Settings.jpg "JTAG_Programming")
 
@@ -196,7 +221,20 @@ Once programmed, you should see the T35 transition into <b>User</b> mode:
   
 ![picture alt](Docs/Successful_SPI_Programming.jpg "SPI_Programming_Successful")  
 
-<b>NOTE: Since the jtag_spi_flash_loader.bit bitstream is still loaded into the T35's configuration RAM after programming, you will need to press the reset button on the module to have the T35 load the new configuration from the flash.</b>
+<b>NOTE: Since the "jtag spi flash loader" bitstream is still loaded into the T35's configuration RAM after programming, you will need to press the reset button on the module to have the T35 load the new configuration from the flash.</b>
+
+### SPI Flash Programming with Efinity Tools Released in 2025 and Later ###
+
+  1. Click the "File Select" Button ![picture alt](Docs/JTAG_Programming_Setup_2025+.jpg "File_Select") and select the relevant <i>*.hex</i> configuration bitstream from the open file dialog box.
+  2. Under "Programming Mode" select "SPI Active using JTAG Bridge" from the drop-down menu.
+  3. Use the "File Select" button in the "Auto configure JTAG Bridge Image" to select the Efinity supplied bit stream image for the device to be programmed.
+  (Efinity should have already recognized the bridge image in the outflow directory, but if it doesn't, make sure to select it before proceeding).
+  4. Click the "Program Button" ![picture alt](Docs/Prog_Start_Btn.jpg "Prog_Button") to program the T35 via JTAG.
+  The programmer will now erase and then program the bitstream image into the flash.
+
+  After programming, you should see a "Flash verify Successful!" message when done.
+  
+<b>NOTE: Since the "jtag spi flash loader" bitstream is still loaded into the T35's configuration RAM after programming, you will need to press the reset button on the module to have the T35 load the new configuration from the flash.</b>
 
 # Design Files #
 
